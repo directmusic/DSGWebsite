@@ -1,0 +1,594 @@
+@import url(//db.onlinewebfonts.com/c/7c2857cbd04acdf539eeb197ca8fd6c2?family=FR73PixelW00-Regular);
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    color: #ff7cc8;
+    fill: currentColor;
+    margin: 0px 0px;
+    min-width: 660px;
+    height: 100%;
+}
+
+#bg {
+    background-color: #d6ddcb;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    justify-content: center;
+    display: grid;
+    height: 1fr;
+    grid-template-columns: 400px;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    grid-template-areas: "logo" "nav"
+}
+
+.logocontainer {
+    grid-area: logo;
+    display: flex;
+    animation: fadeIn ease 1s forwards;
+}
+
+.dsglogo {
+    width: 400px;
+    height: 201px;
+    margin: auto;
+    width: 400px;
+    fill: #ff7cc8;
+    overflow: hidden;
+}
+
+.dsglogo:hover {
+    text-align: center;
+    width: 400px;
+    fill: #fff;
+    animation: glitch1 2s infinite, shake-hard 100ms infinite;
+    overflow: hidden;
+}
+
+.navbarWrap {
+    width: 400px;
+    grid-area: nav;
+    align-items: center;
+    display: grid;
+    vertical-align: bottom;
+}
+
+.navbar {
+    width: 400px;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    animation: fadeIn ease 2s;
+    margin: 0 auto;
+}
+
+.navbar a {
+    color: #ff7cc8;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 20px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar a:hover {
+    opacity: 70%;
+    text-decoration: underline;
+    color: #000;
+}
+
+.dsglogo .logohover {
+    display: none;
+}
+
+.dsglogo:hover .logonormal,
+.dsglogo:active .logonormal {
+    display: none;
+}
+
+.dsglogo:hover .logohover,
+.dsglogo:active .logohover {
+    display: block;
+    fill: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 0px
+    }
+    100% {
+        opacity: 1;
+        top: 50px
+    }
+}
+
+@font-face {
+    font-family: "Perfect DOS VGA 437";
+    src: url("assets/Perfect DOS/perfect_dos_vga_437-webfont.woff") format("woff"), url("assets/Perfect DOS/perfect_dos_vga_437-webfont.woff2")
+}
+
+@media only screen and (max-device-width: 480px) {
+    .navbar a {
+        color: #ff7cc8;
+        text-align: center;
+        text-decoration: none;
+        font-size: 60px;
+        padding: 20px 20px;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .navbarWrap {
+        width: 100%;
+        position: fixed;
+        bottom: 20vw;
+        padding: 50px;
+        align-items: center;
+        z-index: 2;
+    }
+}
+
+@media only screen and (max-device-height: 780px) {}
+
+@keyframes glitch1 {
+    0% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    7% {
+        transform: none;
+        opacity: 0.5;
+        -webkit-filter: blur(0px);
+    }
+    10% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(3px);
+    }
+    27% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    30% {
+        transform: none;
+        opacity: 0.25;
+        -webkit-filter: blur(0px);
+    }
+    35% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    52% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(3px);
+    }
+    55% {
+        transform: none;
+        opacity: 0.25;
+        -webkit-filter: blur(0px);
+    }
+    50% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    72% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    75% {
+        transform: none;
+        opacity: 0.75;
+        -webkit-filter: blur(3px);
+    }
+    80% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+        -webkit-filter: blur(0px);
+    }
+}
+
+
+/*! * * * * * * * * * * * * * * * * * * * *\  
+CSShake :: shake-little
+v1.5.0
+CSS classes to move your DOM
+(c) 2015 @elrumordelaluz
+http://elrumordelaluz.github.io/csshake/
+Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+
+.shake-little {
+    display: inherit;
+    transform-origin: center center;
+}
+
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+    animation-play-state: paused;
+}
+
+.shake-freeze:hover,
+.shake-trigger:hover .shake-freeze,
+.shake-little:hover,
+.shake-trigger:hover .shake-little {
+    animation-play-state: running;
+}
+
+@keyframes shake-little {
+    2% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    4% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    6% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    8% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    10% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    12% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    14% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    16% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    18% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    20% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    22% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    24% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    26% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    28% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    30% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    32% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    34% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    36% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    38% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    40% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    42% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    44% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    46% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    48% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    50% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    52% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    54% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    56% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    58% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    60% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    62% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    64% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    66% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    68% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    70% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    72% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    74% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    76% {
+        transform: translate(0px, 1px) rotate(0.5deg);
+    }
+    78% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    80% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    82% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    84% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    86% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    88% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    90% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    92% {
+        transform: translate(1px, 1px) rotate(0.5deg);
+    }
+    94% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    96% {
+        transform: translate(1px, 0px) rotate(0.5deg);
+    }
+    98% {
+        transform: translate(0px, 0px) rotate(0.5deg);
+    }
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.shake-little:hover,
+.shake-trigger:hover .shake-little,
+.shake-little.shake-freeze,
+.shake-little.shake-constant {
+    animation-name: shake-little;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+/*! * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-hard
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+
+.shake-hard {
+    display: inherit;
+    transform-origin: center center;
+}
+
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+    animation-play-state: paused;
+}
+
+.shake-freeze:hover,
+.shake-trigger:hover .shake-freeze,
+.shake-hard:hover,
+.shake-trigger:hover .shake-hard {
+    animation-play-state: running;
+}
+
+@keyframes shake-hard {
+    2% {
+        transform: translate(5px, 7px) rotate(0.5deg);
+    }
+    4% {
+        transform: translate(5px, 9px) rotate(3.5deg);
+    }
+    6% {
+        transform: translate(-2px, -5px) rotate(3.5deg);
+    }
+    8% {
+        transform: translate(4px, 8px) rotate(-1.5deg);
+    }
+    10% {
+        transform: translate(2px, 9px) rotate(-0.5deg);
+    }
+    12% {
+        transform: translate(-5px, -4px) rotate(-2.5deg);
+    }
+    14% {
+        transform: translate(-6px, -1px) rotate(3.5deg);
+    }
+    16% {
+        transform: translate(-8px, 8px) rotate(2.5deg);
+    }
+    18% {
+        transform: translate(4px, 5px) rotate(-0.5deg);
+    }
+    20% {
+        transform: translate(3px, -3px) rotate(3.5deg);
+    }
+    22% {
+        transform: translate(0px, -6px) rotate(-1.5deg);
+    }
+    24% {
+        transform: translate(-6px, -6px) rotate(3.5deg);
+    }
+    26% {
+        transform: translate(-8px, -6px) rotate(0.5deg);
+    }
+    28% {
+        transform: translate(-3px, -6px) rotate(1.5deg);
+    }
+    30% {
+        transform: translate(7px, 8px) rotate(-1.5deg);
+    }
+    32% {
+        transform: translate(7px, 6px) rotate(2.5deg);
+    }
+    34% {
+        transform: translate(-7px, -7px) rotate(-2.5deg);
+    }
+    36% {
+        transform: translate(7px, 3px) rotate(-0.5deg);
+    }
+    38% {
+        transform: translate(-6px, -1px) rotate(3.5deg);
+    }
+    40% {
+        transform: translate(-3px, 4px) rotate(-0.5deg);
+    }
+    42% {
+        transform: translate(-1px, 10px) rotate(3.5deg);
+    }
+    44% {
+        transform: translate(9px, 3px) rotate(3.5deg);
+    }
+    46% {
+        transform: translate(-3px, 8px) rotate(-2.5deg);
+    }
+    48% {
+        transform: translate(-5px, 7px) rotate(3.5deg);
+    }
+    50% {
+        transform: translate(-9px, -5px) rotate(0.5deg);
+    }
+    52% {
+        transform: translate(2px, 4px) rotate(0.5deg);
+    }
+    54% {
+        transform: translate(2px, -9px) rotate(-2.5deg);
+    }
+    56% {
+        transform: translate(-2px, 9px) rotate(-1.5deg);
+    }
+    58% {
+        transform: translate(0px, 4px) rotate(0.5deg);
+    }
+    60% {
+        transform: translate(-6px, 10px) rotate(3.5deg);
+    }
+    62% {
+        transform: translate(-1px, 3px) rotate(2.5deg);
+    }
+    64% {
+        transform: translate(5px, -5px) rotate(0.5deg);
+    }
+    66% {
+        transform: translate(5px, 3px) rotate(3.5deg);
+    }
+    68% {
+        transform: translate(1px, -7px) rotate(-2.5deg);
+    }
+    70% {
+        transform: translate(7px, 3px) rotate(0.5deg);
+    }
+    72% {
+        transform: translate(-9px, -8px) rotate(-2.5deg);
+    }
+    74% {
+        transform: translate(9px, 10px) rotate(-1.5deg);
+    }
+    76% {
+        transform: translate(-1px, -7px) rotate(1.5deg);
+    }
+    78% {
+        transform: translate(-7px, -4px) rotate(-1.5deg);
+    }
+    80% {
+        transform: translate(8px, -3px) rotate(3.5deg);
+    }
+    82% {
+        transform: translate(9px, 5px) rotate(0.5deg);
+    }
+    84% {
+        transform: translate(-4px, -7px) rotate(1.5deg);
+    }
+    86% {
+        transform: translate(-7px, 9px) rotate(2.5deg);
+    }
+    88% {
+        transform: translate(0px, 10px) rotate(1.5deg);
+    }
+    90% {
+        transform: translate(7px, 4px) rotate(-2.5deg);
+    }
+    92% {
+        transform: translate(-9px, 10px) rotate(-1.5deg);
+    }
+    94% {
+        transform: translate(4px, -8px) rotate(0.5deg);
+    }
+    96% {
+        transform: translate(9px, 0px) rotate(1.5deg);
+    }
+    98% {
+        transform: translate(8px, -3px) rotate(1.5deg);
+    }
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+.shake-hard:hover,
+.shake-trigger:hover .shake-hard,
+.shake-hard.shake-freeze,
+.shake-hard.shake-constant {
+    animation-name: shake-hard;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
