@@ -1,4 +1,11 @@
 @import url(//db.onlinewebfonts.com/c/7c2857cbd04acdf539eeb197ca8fd6c2?family=FR73PixelW00-Regular);
+@font-face {
+    font-family: '04b08';
+    src: url('assets/04b08.ttf.woff') format('woff'), url('assets/04b08.ttf.svg#04b08') format('svg'), url('assets/04b08.ttf.eot'), url('assets/04b08.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     min-height: 100%;
     position: relative;
@@ -64,7 +71,7 @@ body {
 }
 
 .navbar {
-    font-family: 'VT323', monospace;
+    font-family: '04b08';
     text-align: center;
     animation: fadeIn ease 2s;
     margin: 0 auto;
@@ -101,17 +108,6 @@ body {
     fill: #fff;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        top: 0px
-    }
-    100% {
-        opacity: 1;
-        top: 50px
-    }
-}
-
 @media only screen and (max-device-width: 480px) {
     .logocontainer {
         grid-area: logo;
@@ -145,6 +141,17 @@ body {
         padding: 20px 0;
         justify-content: center;
         flex-direction: row;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 0px
+    }
+    100% {
+        opacity: 1;
+        top: 50px
     }
 }
 
